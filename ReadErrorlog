@@ -1,0 +1,8 @@
+SET NOCOUNT ON
+DECLARE @Counter INT = 1
+WHILE @Counter <=6 
+BEGIN
+	EXEC sp_readerrorlog @COUNTER, 1, 'fail'
+    --PRINT 'The counter value is = ' + CONVERT(VARCHAR,@Counter)
+    SET @Counter  = @Counter  + 1
+END
